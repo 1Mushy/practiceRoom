@@ -89,10 +89,10 @@ def mainScript():
         hourPlace = int(hourPlace)
 
         #removing 10 minutes from the event start time
-        if minutePlace >= 10:
-            minutePlace = minutePlace - 10
+        if minutePlace >= 21:
+            minutePlace = minutePlace - 21
         else:
-            minutePlace = minutePlace + 50
+            minutePlace = minutePlace + 39
             hourPlace = hourPlace - 1
             
         minutePlace = str(minutePlace)
@@ -150,7 +150,7 @@ def mainScript():
         print(datetime.now())
         
         
-        time.sleep(300)
+        time.sleep(600)
         
         
         print("yay ;D")
@@ -166,7 +166,7 @@ def mainScript():
         repeatVar = len(startTime)
 
 
-schedule.every().day.at("20:10").do(mainScript)
+schedule.every().day.at("01:10").do(mainScript)
 
 while True:
     schedule.run_pending()
